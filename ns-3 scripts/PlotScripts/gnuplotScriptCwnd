@@ -1,0 +1,8 @@
+set terminal pngcairo enhanced color lw 1.5 font 'Times Roman'
+set xrange [0:100]
+set yrange [0:300]
+set output "Cwnd.png"
+set xlabel "Time (sec)"
+set ylabel "Cwnd (Packets)"
+set key right top vertical
+plot "cwnd-ecn-enabled.dat" title "Cwnd-ecn-enabled" with lines lw 1.5 lc 'blue',"cwnd-ecn-disabled.dat" title "Cwnd-ecn-disabled" with lines lw 1.5 lc 'red'

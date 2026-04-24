@@ -1,0 +1,8 @@
+set terminal pngcairo enhanced color lw 1.5 font 'Times Roman'
+set xrange [0:100]
+set yrange [0:250]
+set output "queueSize.png"
+set xlabel "Time (sec)"
+set ylabel "Queue occupancy (No. of packets)"
+set key right top vertical
+plot "queueSize-ecn-enabled.dat" title "queueSize-ecn-enabled" with lines lw 1.5 lc 'blue',"queueSize-ecn-disabled.dat" title "queueSize-ecn-disabled" with lines lw 1.5 lc 'red'
